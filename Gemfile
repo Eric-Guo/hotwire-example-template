@@ -68,5 +68,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver", ">= 4.0.0.rc1"
+  gem "capybara_accessible_selectors", github: "citizensadvice/capybara_accessible_selectors"
   gem "webdrivers"
 end
