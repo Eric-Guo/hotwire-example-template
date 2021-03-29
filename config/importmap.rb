@@ -1,4 +1,7 @@
 Rails.application.config.importmap.draw do
+  pin "trix"
+  pin "@rails/actiontext", to: "actiontext.js"
+
   pin "@hotwired/stimulus", to: "stimulus.js"
   pin "@hotwired/stimulus-autoloader", to: "stimulus-autoloader.js"
   pin_all_from "app/javascript/controllers", under: "controllers"

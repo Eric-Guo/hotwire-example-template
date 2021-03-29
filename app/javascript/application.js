@@ -5,3 +5,6 @@
 import "@hotwired/turbo-rails"
 
 import "@hotwired/stimulus-autoloader"
+
+import "trix"
+import "@rails/actiontext"
