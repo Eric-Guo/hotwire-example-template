@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+
+[hidden]                                            { display: none !important; }
+button[aria-selected="true"]                        { outline: 2px dotted black; }
