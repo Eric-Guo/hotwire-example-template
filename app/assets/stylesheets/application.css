@@ -15,4 +15,22 @@
  */
 
 [hidden]                                            { display: none !important; }
+
+.absolute                                           { position: absolute; }
+.bg-white                                           { background-color: white; }
+.border-0                                           { border-width: 0; }
+.flex                                               { display: flex; }
+.flex-col                                           { flex-direction: column; }
+.p-0                                                { padding: 0; }
+.p-1                                                { padding: 0.25rem; }
+.sr-only                                            { position: absolute;
+                                                      width: 1px;
+                                                      height: 1px;
+                                                      padding: 0;
+                                                      margin: -1px;
+                                                      overflow: hidden;
+                                                      clip: rect(0, 0, 0, 0);
+                                                      white-space: nowrap;
+                                                      border-width: 0; }
+
 button[aria-selected="true"]                        { outline: 2px dotted black; }
