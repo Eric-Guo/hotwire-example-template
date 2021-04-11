@@ -1,5 +1,5 @@
 class MentionsController < ApplicationController
   def new
-    @users = User.all.order(username: :asc)
+    @users = User.username_matching_handle(params[:username]).order(username: :asc)
   end
 end
