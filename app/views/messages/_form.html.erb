@@ -23,10 +23,6 @@
   <fieldset>
     <legend>Mentions</legend>
 
-    <% User.all.order(username: :asc).each do |user| %>
-      <button type="button" name="sgid" value="<%= user.attachable_sgid %>" data-action="click->mentions#insert">
-        <%= render partial: user.to_trix_content_attachment_partial_path, object: user, as: :user %>
-      </button>
-    <% end %>
+    <turbo-frame id="mentions" src="<%= new_mention_path %>"></turbo-frame>
   </fieldset>
 <% end %>
