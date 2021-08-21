@@ -7,7 +7,7 @@
   <p class="relative group">
     <%= link_to "Show this user", user %>
     <turbo-frame id="<%= dom_id user, :tooltip %>"
-                 src="<%= user_tooltip_path(user) %>"
+                 src="<%= user_tooltip_path(user, turbo_frame: dom_id(user, :tooltip)) %>"
                  class="absolute hidden group-hover:block peer-hover:block focus-within:block"
     ></turbo-frame>
   </p>

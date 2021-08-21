@@ -1,4 +1,4 @@
-<turbo-frame id="<%= dom_id @user, :tooltip %>">
+<turbo-frame id="<%= params.fetch :turbo_frame, dom_id(@user, :tooltip) %>">
   <% if @user.avatar.attached? %>
     <%= image_tag @user.avatar, width: 100, height: 100 %>
   <% end %>
