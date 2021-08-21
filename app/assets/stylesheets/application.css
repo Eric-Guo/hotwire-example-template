@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+
+:hover ~ .peer-hover\:block         { display: block; }

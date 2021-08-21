@@ -4,7 +4,11 @@
     <%= user.name %>
   </p>
 
-  <p>
+  <p class="relative group">
     <%= link_to "Show this user", user %>
+    <turbo-frame id="<%= dom_id user, :tooltip %>"
+                 src="<%= user_tooltip_path(user) %>"
+                 class="absolute hidden group-hover:block peer-hover:block focus-within:block"
+    ></turbo-frame>
   </p>
 </div>
