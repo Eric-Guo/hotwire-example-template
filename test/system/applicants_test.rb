@@ -14,7 +14,7 @@ class ApplicantsTest < ApplicationSystemTestCase
     visit applicants_url
     click_on "New Applicant"
 
-    fill_in "Name", with: @applicant.name
+    fill_in "Name", with: @applicant.name, match: :first
     click_on "Create Applicant"
 
     assert_text "Applicant was successfully created"
@@ -25,7 +25,7 @@ class ApplicantsTest < ApplicationSystemTestCase
     visit applicants_url
     click_on "Edit", match: :first
 
-    fill_in "Name", with: @applicant.name
+    fill_in "Name", with: @applicant.name, match: :first
     click_on "Update Applicant"
 
     assert_text "Applicant was successfully updated"
@@ -39,5 +39,19 @@ class ApplicantsTest < ApplicationSystemTestCase
     end
 
     assert_text "Applicant was successfully destroyed"
+  end
+
+  test "accepts nested attributes for Personal References when creating" do
+    visit new_applicant_path
+
+    fill_in "Name", with: "New Applicant", match: :first
+    within "fieldset", text: "Personal Reference" do
+      fill_in "Name", with: "Friend"
+      fill_in "Email address", with: "friend@example.com"
+    end
+    click_on "Create Applicant"
+
+    assert_text "Applicant was successfully created"
+    assert_text "friend@example.com"
   end
 end
