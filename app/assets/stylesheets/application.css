@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+
+.group:first-of-type .group-first-of-type\:hidden { display: none; }
