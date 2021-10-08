@@ -20,3 +20,6 @@
 .grid-cols-3  { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .h-12         { height: 3rem; }
 .row-end-auto { grid-row-end: auto; }
+
+.group:first-of-type  .group-first-of-type\:hidden  { display: none; }
+.group:last-of-type   .group-last-of-type\:hidden   { display: none; }
