@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.col-span-3   { grid-column: span 3 / span 3; }
+.gap-1        { gap: 0.25rem; }
+.grid         { display: grid; }
+.grid-cols-3  { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.h-12         { height: 3rem; }
+.row-end-auto { grid-row-end: auto; }
