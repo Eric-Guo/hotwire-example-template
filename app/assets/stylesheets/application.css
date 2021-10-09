@@ -25,3 +25,4 @@
 
 .group:first-of-type  .group-first-of-type\:hidden  { display: none; }
 .group:last-of-type   .group-last-of-type\:hidden   { display: none; }
+.peer:empty         + .peer-empty\:block            { display: block; }
