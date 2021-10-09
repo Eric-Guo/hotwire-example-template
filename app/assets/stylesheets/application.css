@@ -19,6 +19,8 @@
 .grid         { display: grid; }
 .grid-cols-3  { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .h-12         { height: 3rem; }
+.hidden       { display: none; }
+.opacity-25   { opacity: 0.25; }
 .row-end-auto { grid-row-end: auto; }
 
 .group:first-of-type  .group-first-of-type\:hidden  { display: none; }
